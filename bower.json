@@ -1,0 +1,28 @@
+{
+  "name": "jquery-form-async",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rgnevashev/jquery-form-async",
+  "authors": [
+    "Roman Karmatsky <rgnevashev@gmail.com>"
+  ],
+  "description": "Jquery form submit via data attributes",
+  "main": "jquery.form-async.js",
+  "keywords": [
+    "form",
+    "submit",
+    "ajax",
+    "data"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  dependencies: [
+	"jquery": ">= 1.9.1",
+	"jquery-form": ">=3.45.0"	
+  ]
+}
