@@ -65,13 +65,14 @@ $(function(){
         		}
 	        },
 			error: function(xhr, status, error, form){
+				var json = xhr.responseJSON;
 			   	target.find('.indicator').remove();
 				target.find('button,input[type=submit]').removeAttr('disabled');
 			   	form.find('button,input[type=submit]').removeAttr('disabled');
 			   	if (_(json.errors).size()) {
 					_errors(form, json.errors);
 			   	} else {
-	        		$.bootstrapGrowl((xhr.responseJSON.name?xhr.responseJSON.name:xhr.responseJSON.message), {
+	        		$.bootstrapGrowl((json.name?json.name:json.message), {
 						type: 'danger',
 		        		offset: {from: 'bottom', amount: 20}
 		        	});
